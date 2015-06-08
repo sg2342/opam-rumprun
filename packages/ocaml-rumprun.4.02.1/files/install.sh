@@ -22,7 +22,7 @@ make install || exit 1
 
 # Replace bytecode interpreter path with host ocamlrun.
 for bin in ${OPAM_PREFIX}/${RUMPRUN_PLATFORM}/bin/*; do
-    sed -i "s%^.*ocamlrun$%#\!$(which ocamlrun)%" ${bin}
+    sed -i -e "s%^.*ocamlrun$%#\!$(which ocamlrun)%" ${bin}
 done
 
 # "Install" built-in bytecode packages by copying them from the host compiler.

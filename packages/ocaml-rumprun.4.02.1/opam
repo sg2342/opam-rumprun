@@ -15,4 +15,4 @@ remove: [
 depends: [
   "ocamlfind" {>= "1.5.4"}
 ]
-available: [ (ocaml-version = "4.02.1" & arch = "x86_64") ]
+available: [ (ocaml-version = "4.02.1" & (arch = "x86_64" | arch = "amd64")) ]
